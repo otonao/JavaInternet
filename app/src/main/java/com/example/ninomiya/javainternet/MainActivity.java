@@ -60,7 +60,67 @@ public class MainActivity extends AppCompatActivity{
                                                                                 MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
                                                                                     @Override
                                                                                     public void onTaskFinished() {
-                                                                                        System.out.println("FINISH");
+                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                            @Override
+                                                                                            public void onTaskFinished() {
+                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                    @Override
+                                                                                                    public void onTaskFinished() {
+                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                            @Override
+                                                                                                            public void onTaskFinished() {
+                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                    @Override
+                                                                                                                    public void onTaskFinished() {
+                                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                            @Override
+                                                                                                                            public void onTaskFinished() {
+                                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                    @Override
+                                                                                                                                    public void onTaskFinished() {
+                                                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                            @Override
+                                                                                                                                            public void onTaskFinished() {
+                                                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                    @Override
+                                                                                                                                                    public void onTaskFinished() {
+                                                                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                            @Override
+                                                                                                                                                            public void onTaskFinished() {
+                                                                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                    @Override
+                                                                                                                                                                    public void onTaskFinished() {
+                                                                                                                                                                        System.out.println("FINISH");
+                                                                                                                                                                    }
+                                                                                                                                                                });
+                                                                                                                                                                testTask.execute(urls[19]);
+                                                                                                                                                            }
+                                                                                                                                                        });
+                                                                                                                                                        testTask.execute(urls[18]);
+                                                                                                                                                    }
+                                                                                                                                                });
+                                                                                                                                                testTask.execute(urls[17]);
+                                                                                                                                            }
+                                                                                                                                        });
+                                                                                                                                        testTask.execute(urls[16]);
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                testTask.execute(urls[15]);
+                                                                                                                            }
+                                                                                                                        });
+                                                                                                                        testTask.execute(urls[14]);
+                                                                                                                    }
+                                                                                                                });
+                                                                                                                testTask.execute(urls[13]);
+                                                                                                            }
+                                                                                                        });
+                                                                                                        testTask.execute(urls[12]);
+                                                                                                    }
+                                                                                                });
+                                                                                                testTask.execute(urls[11]);
+                                                                                            }
+                                                                                        });
+                                                                                        testTask.execute(urls[10]);
                                                                                     }
                                                                                 });
                                                                                 testTask.execute(urls[9]);
