@@ -21,14 +21,6 @@ public class MyAsyncTask extends AsyncTask<String, Void, String> {
         this.callback = callback;
     }
 
-    MyAsyncTask(Context context) {
-        // 本メソッドは UI スレッドで処理されます。
-        super();
-        MainActivity mainActivity = (MainActivity) context;
-        textView = mainActivity.findViewById(R.id.myTextView);
-        scrollView = mainActivity.findViewById(R.id.scroll);
-    }
-
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
