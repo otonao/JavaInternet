@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity{
         cancelButton.setOnClickListener(v -> textView.setText(""));
     }
 
-
     public void asyncProcess(Context context){
         MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
             @Override
