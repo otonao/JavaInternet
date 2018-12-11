@@ -48,3 +48,7 @@ public class MyAsyncTask extends AsyncTask<String, Void, String> {
         this.callback.onTaskFinished();
     }
 }
+
+interface AsyncTaskCallbacks {
+    void onTaskFinished();
+}
