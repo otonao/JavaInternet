@@ -9,13 +9,14 @@ public class MyAsyncTask extends AsyncTask<String, Void, String> {
 
     private TextView textView;
     private ScrollView scrollView;
+    private MainActivity mainActivity;
 
     private AsyncTaskCallbacks callback;
 
     MyAsyncTask(Context context, AsyncTaskCallbacks callback) {
         // 本メソッドは UI スレッドで処理されます。
         super();
-        MainActivity mainActivity = (MainActivity) context;
+        mainActivity = (MainActivity) context;
         textView = mainActivity.findViewById(R.id.myTextView);
         scrollView = mainActivity.findViewById(R.id.scroll);
         this.callback = callback;
@@ -24,14 +25,18 @@ public class MyAsyncTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        // プログレス表示処理
     }
 
     @Override
     protected String doInBackground(String... params) {
-        String sb = HtmlGet.htmlGet(params[0]);
-        System.out.println("SUCCESS");
-        return HtmlGet.titleGet(sb);
+        try {
+            String sb = HtmlGet.htmlGet(params[0]);
+            System.out.println("SUCCESS");
+            return HtmlGet.titleGet(sb);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "ERROR";
+        }
     }
 
     @Override

@@ -28,7 +28,6 @@ class HtmlGet {
             connection.setRequestMethod("GET");
             connection.connect();
 
-
             // レスポンスコードの確認します。
             int responseCode = connection.getResponseCode();
             if (responseCode != HttpsURLConnection.HTTP_OK) {

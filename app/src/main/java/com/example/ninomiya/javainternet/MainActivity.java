@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
     private TextView textView;
     String[] urls;
+    String viewText = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,131 +27,264 @@ public class MainActivity extends AppCompatActivity{
         Button getButton = findViewById(R.id.htmlGetButton);
         getButton.setOnClickListener(v -> asyncProcess(this));
 
-        Button cancelButton = findViewById(R.id.clearButton);
-        cancelButton.setOnClickListener(v -> textView.setText(""));
+        Button clearButton = findViewById(R.id.clearButton);
+        clearButton.setOnClickListener(v -> textView.setText(null));
     }
 
     public void asyncProcess(Context context){
-        MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-            @Override
-            public void onTaskFinished() {
-                MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-                    @Override
-                    public void onTaskFinished() {
-                        MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
+        try {
+            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                @Override
+                public void onTaskFinished() {
+                    viewText = textView.getText().toString();
+                    try {
+                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                             @Override
                             public void onTaskFinished() {
-                                MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-                                    @Override
-                                    public void onTaskFinished() {
-                                        MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-                                            @Override
-                                            public void onTaskFinished() {
-                                                MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
+                                viewText = textView.getText().toString();
+                                try {
+                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                        @Override
+                                        public void onTaskFinished() {
+                                            viewText = textView.getText().toString();
+                                            try {
+                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                                                     @Override
                                                     public void onTaskFinished() {
-                                                        MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-                                                            @Override
-                                                            public void onTaskFinished() {
-                                                                MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-                                                                    @Override
-                                                                    public void onTaskFinished() {
-                                                                        MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
+                                                        viewText = textView.getText().toString();
+                                                        try {
+                                                            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                @Override
+                                                                public void onTaskFinished() {
+                                                                    viewText = textView.getText().toString();
+                                                                    try {
+                                                                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                                                                             @Override
                                                                             public void onTaskFinished() {
-                                                                                MyAsyncTask testTask = new MyAsyncTask(context,new AsyncTaskCallbacks(){
-                                                                                    @Override
-                                                                                    public void onTaskFinished() {
-                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                            @Override
-                                                                                            public void onTaskFinished() {
-                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                viewText = textView.getText().toString();
+                                                                                try {
+                                                                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                        @Override
+                                                                                        public void onTaskFinished() {
+                                                                                            viewText = textView.getText().toString();
+                                                                                            try {
+                                                                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                                                                                                     @Override
                                                                                                     public void onTaskFinished() {
-                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                                            @Override
-                                                                                                            public void onTaskFinished() {
-                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                                                    @Override
-                                                                                                                    public void onTaskFinished() {
-                                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                        viewText = textView.getText().toString();
+                                                                                                        try {
+                                                                                                            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                @Override
+                                                                                                                public void onTaskFinished() {
+                                                                                                                    viewText = textView.getText().toString();
+                                                                                                                    try {
+                                                                                                                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                                                                                                                             @Override
                                                                                                                             public void onTaskFinished() {
-                                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                                                                    @Override
-                                                                                                                                    public void onTaskFinished() {
-                                                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                                                                            @Override
-                                                                                                                                            public void onTaskFinished() {
-                                                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                viewText = textView.getText().toString();
+                                                                                                                                try {
+                                                                                                                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                        @Override
+                                                                                                                                        public void onTaskFinished() {
+                                                                                                                                            viewText = textView.getText().toString();
+                                                                                                                                            try {
+                                                                                                                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                                                                                                                                                     @Override
                                                                                                                                                     public void onTaskFinished() {
-                                                                                                                                                        MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                                                                                            @Override
-                                                                                                                                                            public void onTaskFinished() {
-                                                                                                                                                                MyAsyncTask testTask = new MyAsyncTask(context, new AsyncTaskCallbacks() {
-                                                                                                                                                                    @Override
-                                                                                                                                                                    public void onTaskFinished() {
-                                                                                                                                                                        System.out.println("FINISH");
+                                                                                                                                                        viewText = textView.getText().toString();
+                                                                                                                                                        try {
+                                                                                                                                                            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                @Override
+                                                                                                                                                                public void onTaskFinished() {
+                                                                                                                                                                    viewText = textView.getText().toString();
+                                                                                                                                                                    try {
+                                                                                                                                                                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                            @Override
+                                                                                                                                                                            public void onTaskFinished() {
+                                                                                                                                                                                viewText = textView.getText().toString();
+                                                                                                                                                                                try {
+                                                                                                                                                                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                                        @Override
+                                                                                                                                                                                        public void onTaskFinished() {
+                                                                                                                                                                                            viewText = textView.getText().toString();
+                                                                                                                                                                                            try {
+                                                                                                                                                                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                                                    @Override
+                                                                                                                                                                                                    public void onTaskFinished() {
+                                                                                                                                                                                                        viewText = textView.getText().toString();
+                                                                                                                                                                                                        try {
+                                                                                                                                                                                                            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                                                                @Override
+                                                                                                                                                                                                                public void onTaskFinished() {
+                                                                                                                                                                                                                    viewText = textView.getText().toString();
+                                                                                                                                                                                                                    try {
+                                                                                                                                                                                                                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                                                                            @Override
+                                                                                                                                                                                                                            public void onTaskFinished() {
+                                                                                                                                                                                                                                viewText = textView.getText().toString();
+                                                                                                                                                                                                                                try {
+                                                                                                                                                                                                                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                                                                                        @Override
+                                                                                                                                                                                                                                        public void onTaskFinished() {
+                                                                                                                                                                                                                                            viewText = textView.getText().toString();
+                                                                                                                                                                                                                                            try {
+                                                                                                                                                                                                                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                                                                                                                                                    @Override
+                                                                                                                                                                                                                                                    public void onTaskFinished() {
+                                                                                                                                                                                                                                                        viewText = textView.getText().toString();
+                                                                                                                                                                                                                                                        Toast.makeText(context, "FINISH", Toast.LENGTH_LONG).show();
+                                                                                                                                                                                                                                                        System.out.print("FINISH\n\n");
+                                                                                                                                                                                                                                                        System.out.print(viewText);
+                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                });
+                                                                                                                                                                                                                                                task.execute(urls[19]);
+                                                                                                                                                                                                                                            } catch (Exception e) {
+                                                                                                                                                                                                                                                textView.append("ERROR");
+                                                                                                                                                                                                                                                e.printStackTrace();
+                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                    });
+                                                                                                                                                                                                                                    task.execute(urls[18]);
+
+                                                                                                                                                                                                                                } catch (Exception e) {
+                                                                                                                                                                                                                                    textView.append("ERROR");
+                                                                                                                                                                                                                                    e.printStackTrace();
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                        });
+                                                                                                                                                                                                                        task.execute(urls[17]);
+                                                                                                                                                                                                                    } catch (Exception e) {
+                                                                                                                                                                                                                        textView.append("ERROR");
+                                                                                                                                                                                                                        e.printStackTrace();
+                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                            });
+                                                                                                                                                                                                            task.execute(urls[16]);
+
+                                                                                                                                                                                                        } catch (Exception e) {
+                                                                                                                                                                                                            textView.append("ERROR");
+                                                                                                                                                                                                            e.printStackTrace();
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                });
+                                                                                                                                                                                                task.execute(urls[15]);
+                                                                                                                                                                                            } catch (Exception e) {
+                                                                                                                                                                                                textView.append("ERROR");
+                                                                                                                                                                                                e.printStackTrace();
+                                                                                                                                                                                            }
+                                                                                                                                                                                        }
+                                                                                                                                                                                    });
+                                                                                                                                                                                    task.execute(urls[14]);
+
+                                                                                                                                                                                } catch (Exception e) {
+                                                                                                                                                                                    textView.append("ERROR");
+                                                                                                                                                                                    e.printStackTrace();
+                                                                                                                                                                                }
+                                                                                                                                                                            }
+                                                                                                                                                                        });
+                                                                                                                                                                        task.execute(urls[13]);
+
+                                                                                                                                                                    } catch (Exception e) {
+                                                                                                                                                                        textView.append("ERROR");
+                                                                                                                                                                        e.printStackTrace();
                                                                                                                                                                     }
-                                                                                                                                                                });
-                                                                                                                                                                testTask.execute(urls[19]);
-                                                                                                                                                            }
-                                                                                                                                                        });
-                                                                                                                                                        testTask.execute(urls[18]);
+                                                                                                                                                                }
+                                                                                                                                                            });
+                                                                                                                                                            task.execute(urls[12]);
+                                                                                                                                                        } catch (Exception e) {
+                                                                                                                                                            textView.append("ERROR");
+                                                                                                                                                            e.printStackTrace();
+                                                                                                                                                        }
                                                                                                                                                     }
                                                                                                                                                 });
-                                                                                                                                                testTask.execute(urls[17]);
+                                                                                                                                                task.execute(urls[11]);
+
+                                                                                                                                            } catch (Exception e) {
+                                                                                                                                                textView.append("ERROR");
+                                                                                                                                                e.printStackTrace();
                                                                                                                                             }
-                                                                                                                                        });
-                                                                                                                                        testTask.execute(urls[16]);
-                                                                                                                                    }
-                                                                                                                                });
-                                                                                                                                testTask.execute(urls[15]);
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                    task.execute(urls[10]);
+                                                                                                                                } catch (Exception e) {
+                                                                                                                                    textView.append("ERROR");
+                                                                                                                                    e.printStackTrace();
+                                                                                                                                }
                                                                                                                             }
                                                                                                                         });
-                                                                                                                        testTask.execute(urls[14]);
+                                                                                                                        task.execute(urls[9]);
+
+                                                                                                                    } catch (Exception e) {
+                                                                                                                        textView.append("ERROR");
+                                                                                                                        e.printStackTrace();
                                                                                                                     }
-                                                                                                                });
-                                                                                                                testTask.execute(urls[13]);
-                                                                                                            }
-                                                                                                        });
-                                                                                                        testTask.execute(urls[12]);
+                                                                                                                }
+                                                                                                            });
+                                                                                                            task.execute(urls[8]);
+                                                                                                        } catch (Exception e) {
+                                                                                                            textView.append("ERROR");
+                                                                                                            e.printStackTrace();
+                                                                                                        }
                                                                                                     }
                                                                                                 });
-                                                                                                testTask.execute(urls[11]);
+                                                                                                task.execute(urls[7]);
+
+                                                                                            } catch (Exception e) {
+                                                                                                textView.append("ERROR");
+                                                                                                e.printStackTrace();
                                                                                             }
-                                                                                        });
-                                                                                        testTask.execute(urls[10]);
-                                                                                    }
-                                                                                });
-                                                                                testTask.execute(urls[9]);
+                                                                                        }
+                                                                                    });
+                                                                                    task.execute(urls[6]);
+
+                                                                                } catch (Exception e) {
+                                                                                    textView.append("ERROR");
+                                                                                    e.printStackTrace();
+                                                                                }
                                                                             }
                                                                         });
-                                                                        testTask.execute(urls[8]);
+                                                                        task.execute(urls[5]);
+                                                                    } catch (Exception e) {
+                                                                        textView.append("ERROR");
+                                                                        e.printStackTrace();
                                                                     }
-                                                                });
-                                                                testTask.execute(urls[7]);
-                                                            }
-                                                        });
-                                                        testTask.execute(urls[6]);
+                                                                }
+                                                            });
+                                                            task.execute(urls[4]);
+
+                                                        } catch (Exception e) {
+                                                            textView.append("ERROR");
+                                                            e.printStackTrace();
+                                                        }
                                                     }
                                                 });
-                                                testTask.execute(urls[5]);
+                                                task.execute(urls[3]);
+                                            } catch (Exception e) {
+                                                textView.append("ERROR");
+                                                e.printStackTrace();
                                             }
-                                        });
-                                        testTask.execute(urls[4]);
-                                    }
-                                });
-                                testTask.execute(urls[3]);
+                                        }
+                                    });
+                                    task.execute(urls[2]);
+
+                                } catch (Exception e) {
+                                    textView.append("ERROR");
+                                    e.printStackTrace();
+                                }
                             }
                         });
-                        testTask.execute(urls[2]);
+                        task.execute(urls[1]);
+                    } catch (Exception e) {
+                        textView.append("ERROR");
+                        e.printStackTrace();
                     }
-                });
-                testTask.execute(urls[1]);
-            }
-        });
-        testTask.execute(urls[0]);
+                }
+            });
+            task.execute(urls[0]);
+
+        } catch (Exception e) {
+            textView.append("ERROR");
+            e.printStackTrace();
+        }
     }
 }
