@@ -29,14 +29,8 @@ public class MyAsyncTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... params) {
-        try {
-            String sb = HtmlGet.htmlGet(params[0]);
-            System.out.println("SUCCESS");
-            return HtmlGet.titleGet(sb);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "ERROR";
-        }
+        String sb = HtmlGet.htmlGet(params[0]);
+        return HtmlGet.titleGet(sb);
     }
 
     @Override
