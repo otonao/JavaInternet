@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void asyncProcess(Context context){
+        long start = System.currentTimeMillis();
 
         try {
             MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
@@ -112,7 +113,8 @@ public class MainActivity extends AppCompatActivity{
                                                                                                                                                                                                                                                 MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                                                                                                                                                                                                                                                     @Override
                                                                                                                                                                                                                                                     public void onTaskFinished() {
-                                                                                                                                                                                                                                                        Toast.makeText(context, "FINISH", Toast.LENGTH_LONG).show();
+                                                                                                                                                                                                                                                        long end = System.currentTimeMillis();
+                                                                                                                                                                                                                                                        Toast.makeText(context, (end - start) + "ms", Toast.LENGTH_LONG).show();
                                                                                                                                                                                                                                                     }
                                                                                                                                                                                                                                                 });
                                                                                                                                                                                                                                                 task.execute(urls[19]);
@@ -253,6 +255,5 @@ public class MainActivity extends AppCompatActivity{
             textView.append("ERROR");
             e.printStackTrace();
         }
-
     }
 }
