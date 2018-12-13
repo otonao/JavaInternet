@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void asyncProcess(Context context){
+
         try {
             MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                 @Override
@@ -252,5 +253,6 @@ public class MainActivity extends AppCompatActivity{
             textView.append("ERROR");
             e.printStackTrace();
         }
+
     }
 }
