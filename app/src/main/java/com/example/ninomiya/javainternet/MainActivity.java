@@ -37,8 +37,107 @@ public class MainActivity extends AppCompatActivity{
             MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
                 @Override
                 public void onTaskFinished() {
-                    long end = System.currentTimeMillis();
-                    Toast.makeText(context, (end - start) + "ms", Toast.LENGTH_LONG).show();
+                    try {
+                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                            @Override
+                            public void onTaskFinished() {
+                                try {
+                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                        @Override
+                                        public void onTaskFinished() {
+                                            try {
+                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                    @Override
+                                                    public void onTaskFinished() {
+                                                        try {
+                                                            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                @Override
+                                                                public void onTaskFinished() {
+                                                                    try {
+                                                                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                            @Override
+                                                                            public void onTaskFinished() {
+                                                                                try {
+                                                                                    MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                        @Override
+                                                                                        public void onTaskFinished() {
+                                                                                            try {
+                                                                                                MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                    @Override
+                                                                                                    public void onTaskFinished() {
+                                                                                                        try {
+                                                                                                            MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                @Override
+                                                                                                                public void onTaskFinished() {
+                                                                                                                    try {
+                                                                                                                        MyAsyncTask task = new MyAsyncTask(context, new AsyncTaskCallbacks() {
+                                                                                                                            @Override
+                                                                                                                            public void onTaskFinished() {
+                                                                                                                                long end = System.currentTimeMillis();
+                                                                                                                                Toast.makeText(context, (end - start) + "ms", Toast.LENGTH_LONG).show();
+                                                                                                                            }
+                                                                                                                        });
+                                                                                                                        task.execute(urls[9]);
+                                                                                                                    } catch (Exception e) {
+                                                                                                                        textView.append("ERROR");
+                                                                                                                        e.printStackTrace();
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            });
+                                                                                                            task.execute(urls[8]);
+                                                                                                        } catch (Exception e) {
+                                                                                                            textView.append("ERROR");
+                                                                                                            e.printStackTrace();
+                                                                                                        }
+                                                                                                    }
+                                                                                                });
+                                                                                                task.execute(urls[7]);
+                                                                                            } catch (Exception e) {
+                                                                                                textView.append("ERROR");
+                                                                                                e.printStackTrace();
+                                                                                            }
+                                                                                        }
+                                                                                    });
+                                                                                    task.execute(urls[6]);
+                                                                                } catch (Exception e) {
+                                                                                    textView.append("ERROR");
+                                                                                    e.printStackTrace();
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                        task.execute(urls[5]);
+                                                                    } catch (Exception e) {
+                                                                        textView.append("ERROR");
+                                                                        e.printStackTrace();
+                                                                    }
+                                                                }
+                                                            });
+                                                            task.execute(urls[4]);
+                                                        } catch (Exception e) {
+                                                            textView.append("ERROR");
+                                                            e.printStackTrace();
+                                                        }
+                                                    }
+                                                });
+                                                task.execute(urls[3]);
+                                            } catch (Exception e) {
+                                                textView.append("ERROR");
+                                                e.printStackTrace();
+                                            }
+                                        }
+                                    });
+                                    task.execute(urls[2]);
+                                } catch (Exception e) {
+                                    textView.append("ERROR");
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+                        task.execute(urls[1]);
+                    } catch (Exception e) {
+                        textView.append("ERROR");
+                        e.printStackTrace();
+                    }
                 }
             });
             task.execute(urls[0]);
